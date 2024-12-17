@@ -1,0 +1,14 @@
+h2{
+    color:blue;
+}
+
+button{
+    height: 30px;
+    width: 150px;
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+
+body{
+    background-color: palevioletred;
+}

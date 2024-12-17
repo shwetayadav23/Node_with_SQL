@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <style>
+        table, th, td{
+            border: 2px solid blue;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+            background-color: lightgreen;
+        }
+        body{
+            background-color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <h2>Data of all users</h2>
+    <form method="GET" action="/user/new">
+        <button><h3>Add Users</h3></button>
+    </form>
+    <br><br>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% for(let i=0; i<result.length; i++){ %>
+            <tr>
+                <td><%= result[i].id %></td>
+                <td><%= result[i].name %></td> 
+                <td><%= result[i].email %></td>
+                <td>
+                    <form method="GET" action="/user/<%= result[i].id %>/edit">
+                        <button>Edit Username</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="GET" action="/user/<%= result[i].id %>/delete">
+                        <button>Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

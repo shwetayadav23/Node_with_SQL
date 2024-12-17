@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input from user</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        h2{
+        color:khaki;
+        }
+        input{
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        body{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Adding information of user</h2>
+    <form method="POST" action="/user/new">
+        <input placeholder="Enter username" name="username">
+        <br><br><br>
+        <input placeholder="Enter email" name="email">
+        <br><br><br>
+        <input placeholder="Enter password" name="password" type="password">
+        <br><br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

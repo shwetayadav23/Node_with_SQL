@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <style>
+        h2{
+        color:blue;
+        }
+        input{
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            background-color:turquoise;
+        }
+        body{
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <h2>Delete data of id : <%= user.id %></h2>
+    <form method="POST" action="/user/<%= user.id %>?_method=DELETE">
+        <input placeholder="Enter email" name="email">
+        <br><br>
+        <input placeholder="Enter password" name="password" type="password">
+        <br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
